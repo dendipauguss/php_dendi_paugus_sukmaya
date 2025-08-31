@@ -2,14 +2,14 @@
 $step = isset($_POST['step']) ? (int)$_POST['step'] : 1;
 
 if ($step == 1) {
-    // Tampilan awal
+    // Tampilan awal form input nama
     echo "<form method='post'>
             Nama: <input type='text' name='nama'><br>
             <input type='hidden' name='step' value='2'>
             <button type='submit'>Submit</button>
           </form>";
 } elseif ($step == 2) {
-    // Tampilan kedua
+    // Tampilan kedua form input umur
     $nama = $_POST['nama'];
     echo "Halo, $nama!<br>";
     echo "<form method='post'>
@@ -19,7 +19,7 @@ if ($step == 1) {
             <button type='submit'>Submit</button>
           </form>";
 } elseif ($step == 3) {
-    // Tampilan ketiga
+    // Tampilan ketiga form input alamat
     $nama = $_POST['nama'];
     $umur = $_POST['umur'];
     echo "Nama: $nama, Umur: $umur<br>";
@@ -31,7 +31,7 @@ if ($step == 1) {
             <button type='submit'>Submit</button>
           </form>";
 } elseif ($step == 4) {
-    // Tampilan keempat (final)
+    // Tampilan keempat hasil akhir dari data yang terinput
     $nama = $_POST['nama'];
     $umur = $_POST['umur'];
     $alamat = $_POST['alamat'];
